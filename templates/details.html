@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block body %}
+<div>
+    <img src="{{ qs.image.url }}" width="150" height="150"><br>
+    <a href="{% url 'index:details' qs.id %}">{{ qs.name }}</a>
+    <p>{{ qs.description }}</p>
+
+    <a href="{% url 'index:edit_book' qs.id %}" ><button>Edit</button></a>
+    <a href="{% url 'index:delete_book' qs.id %}"> <button>Delete</button></a>
+</div>
+{% endblock %}

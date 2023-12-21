@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+
+{%  for i in qs %}
+<div>
+<img src="{{ i.image.url }}" width="150" height="150"><br>
+<a href="{% url 'index:details' i.id %}">{{ i.name }}</a>
+</div>
+{% empty %}
+
+<p>No book created!</p>
+<a href="{%  url 'index:create_book' %}"> <button>Create A Book Now!</button></a>
+{% endfor %}
+
+{% endblock %}

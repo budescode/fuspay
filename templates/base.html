@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FusPay Test</title>
+    
+<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <ul>
+        <a href="{% url 'index:index' %}" >Home</a>
+        <a href="{% url 'index:create_book' %}">Create Book</a>
+    </ul>
+    {% block body %}
+
+    {% endblock body %}
+</body>
+</html>
